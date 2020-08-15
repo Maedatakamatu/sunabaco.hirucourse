@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<!-- ここはユニコちゃんが担当してます！ -->
 
 <div class="item1">
     <a href="#"><img src="../static/img/yumekawa_animal_unicorn.png"></a>
     <p>ユニコちゃん</p>
-    <form action="/img1" method="post">
+    <form action="/img1" method="post" class=hakidasiform>
         内容：<textarea cols="30" rows="5"></textarea><br>
         <a href="/img1"><input type="submit" name="#" value="送信"></a>
     </form>
+</div>
 
 
 
@@ -18,4 +19,4 @@
 
 
 
-    {% endblock %}
+{% endblock %}

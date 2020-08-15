@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- ここはヒツジちゃんが担当してます！ -->
 
-
-<a href="/img2" method="post"><input type="submit" name="#" value="送信"></a>
-
+<div class="item1">
+    <a href="#"><img src="../static/img/yumekawa_animal_hitsuji.png"></a>
+    <p>ヒツジちゃん</p>
+    <form action="/img2" method="post" class=hakidasiform>
+        内容：<textarea cols="30" rows="5"></textarea><br>
+        <a href="/img2"><input type="submit" name="#" value="送信"></a>
+    </form>
+</div>
 
 {% endblock %}
