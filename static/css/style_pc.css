@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+html {
+	overflow-y: scroll;
+	/* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+
+/* リセットおまじない--------------------------------- */
+
+
+
+h1 {
+	opacity: 0.5;
+}
+
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-image: url(../img/ZHlO6EYo.jpg);
+}
+
+.aaa {
+	background-image: url(../img/a59mOk1xwzCkGAVACiuxWHpuHAxYtqj3eORPGM6lMb6FRGQmu5bMfaR_mp9zW5kvYUE7K1yFiy827ZBVFv95whrZVSZW4DMb4m8YtD8pUl6vmpmR.jpg);
+	padding: 100px;
+	background-size: 1440px 340px;
+}
+
+
+.syoukai {
+	display: flex;
+	justify-content: center
+}
+
+.item1 {
+	padding: 0 100px 0px 100px;
+}
+
+/* 
+li {
+    list-style: none;ß
+}
+
+a {
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    border: 0px;
+    vertical-align: bottom;
+}
+
+/* --------------------------------------------------- */
+
+/* body {
+    font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+}
+
+
+
+
+/* まえだ：この下から主なbody内容のCSS */
+
+
+
+
+/* フッター */
+footer {
+	color: #fff;
+	color: var(--text-bright-color);
+	background-color: #2B5566;
+	background-color: var(--dark-main-color);
+	position: absolute;
+	/*←絶対位置*/
+
+	/*下に固定*/
+}
+
+footer .container {
+	padding: 300px 20px 0 200px
+		/* position: absolute; */
+}
+
+
+
+@media (min-width: 768px) {
+	footer .container {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	.footA {
+		flex: 0 0 40%;
+	}
+
+	.footB {
+		flex: 0 0 60%;
+	}
+
+	.footC {
+		flex: 0 0 100%;
+	}
+}
+
+
+/* フッターA： サイト情報 */
+.footA {
+	margin-bottom: 30px;
+}
+
+.footA h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	letter-spacing: 0.2em;
+}
+
+.footA p {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 14px;
+}
+
+.footA a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+/* フッターB： フッターメニュー */
+.footB div {
+	margin-bottom: 20px;
+}
+
+.footB h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: solid 1px currentColor;
+	font-size: 14px;
+}
+
+.footB ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footB a {
+	display: block;
+	padding: 5px;
+	color: inherit;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.footB a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+@media (min-width: 768px) {
+	.footB {
+		display: flex;
+	}
+
+	.footB div {
+		flex: 1;
+	}
+
+	.footB div:not(:first-child) {
+		margin-left: 40px;
+	}
+}
+
+
+/* フッターC： コピーライト */
+.footC {
+	font-size: 12px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/* フッターD： SNSメニュー */
+.footD {
+	margin-top: 20px;
+}
+
+.footD ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footD a {
+	display: block;
+	margin-right: 8px;
+	padding: 0;
+	color: inherit;
+	font-size: 16px;
+	text-decoration: none;
+	border: solid 1px currentColor;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.footD a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ヘッダー */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+/* ヘッダーA: サイト名 */
+.headA {
+	display: inline-block;
+	line-height: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #5D9AB2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+
+/* ヘッダーB： ナビゲーションメニュー */
+.headB ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.headB a {
+	display: block;
+	padding: 15px;
+	color: inherit;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.headB a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+	header .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+		padding: 15px;
+	}
+
+	.headB ul {
+		display: flex;
+	}
+}
+
+
+/* ヘッダーC： トグルボタン */
+
+@media (max-width: 767px) {
+
+	/* 小さい画面用の設定 */
+	header .container-small {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.headC {
+		margin-right: 10px;
+		padding: 0;
+		border: none;
+		outline: none;
+		background: none;
+		font-size: 28px;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+
+	.headC:hover {
+		opacity: 0.3;
+	}
+
+	.headB {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+
+	/* 大きい画面用の設定 */
+	.headC {
+		display: none;
+	}
+
+	.headB {
+		display: block !important;
+	}
+}
+
+
+/* まえだ：ホームのaboutあああの所の文字を下にずらした。 */
+main {
+	margin-top: 100px;
+	font-size: 28px;
+}
+
+
+
+
+/* ここからメイン部分 */
+
+
+
+/* これが1つ目のカテゴリー部分  */
+.contens-item {
+	float: left;
+	margin: 0px 30px 0px 0px;
+}
+
+.section-title {
+	font-size: 28px;
+	border-bottom: 2px solid #dee7ec;
+	padding-bottom: 15px;
+	margin-bottom: 50px;
+}
+
+.main {
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
