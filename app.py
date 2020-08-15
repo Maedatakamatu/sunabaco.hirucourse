@@ -11,11 +11,17 @@ app.secret_key = 'sunabaco'
 
 from datetime import datetime
 
+
+
+#メインとベースをつなげてる仕組み
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
+
     
+#ここから2枚目のリンクページに飛ぶ仕組み
 
 @app.route('/form1')
 def form1():
@@ -30,6 +36,26 @@ def form2():
 @app.route('/form3')
 def form3():
     return render_template('form3.html')
+
+
+
+#ここから3枚目のリンクページに飛ぶ仕組み
+
+
+@app.route('/img1',methods=["POST"])
+def img1():
+    return render_template('img1.html',)
+
+
+@app.route('/img2',methods=["POST"])
+def img2():
+    return render_template('img2.html')
+
+
+@app.route('/img3',methods=["POST"])
+def img3():
+    return render_template('img3.html')
+    
 
 
 
