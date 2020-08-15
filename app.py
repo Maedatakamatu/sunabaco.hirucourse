@@ -15,10 +15,27 @@ from datetime import datetime
 def index():
     return render_template('index.html')
 
+    
 
 @app.route('/form1')
 def form1():
     return render_template('form1.html',)
+
+
+# @app.route('/form2')
+# def form2():
+#     return render_template('form2.html')
+
+
+# @app.route('/form3')
+# def form2():
+#     return render_template('form3.html')
+
+
+
+
+
+
 
 
 # # GET  /register => 登録画面を表示
