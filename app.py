@@ -23,49 +23,95 @@ def index():
     
 #ここから2枚目のリンクページに飛ぶ仕組み
 
-@app.route('/form1')
-def form1():
-    return render_template('form1.html',)
+# @app.route('/form1')
+# def form1():
+#     return render_template('form1.html',)
 
+
+# @app.route('/form2')
+# def form2():
+#     return render_template('form2.html')
+
+
+# @app.route('/form3')
+# def form3():
+#     return render_template('form3.html')
+
+
+
+# ここはユニコーンのランダムページ
+
+@app.route('/form1')
+def get_hagemasi1():
+    return render_template('form1.html')
+
+@app.route('/form1' ,methods=["POST"])
+def post_hagemasi1():
+    py_hagemasi1 = request.form.get("comment1")
+    print(py_hagemasi1 == "")
+    if py_hagemasi1 == "":
+        return render_template('form1.html')
+    else:
+        conn = sqlite3.connect('service.db')
+        c =conn.cursor()
+        c.execute('SELECT id,name FROM user ORDER BY  RANDOM() limit 1')
+        user_random = c.fetchone()
+        c.close()
+        print(user_random)
+        return render_template('img1.html',db_user_random = user_random)
+
+
+
+
+
+
+
+# ここはヒツジさんのランダムページです。
 
 @app.route('/form2')
-def form2():
+def get_hagemasi2():
     return render_template('form2.html')
 
+@app.route('/form2' ,methods=["POST"])
+def post_hagemasi2():
+    py_hagemasi2 = request.form.get("comment2")
+    print(py_hagemasi2 == "")
+    if py_hagemasi2 == "":
+        return render_template('form2.html')
+    else:
+        conn = sqlite3.connect('service.db')
+        c =conn.cursor()
+        c.execute('SELECT id,name FROM user ORDER BY  RANDOM() limit 1')
+        user_random = c.fetchone()
+        c.close()
+        print(user_random)
+        return render_template('img2.html',db_user_random = user_random)
+
+        
+
+
+# ここはブタさんのランダムページ
 
 @app.route('/form3')
-def form3():
+def get_hagemasi3():
     return render_template('form3.html')
 
+@app.route('/form3' ,methods=["POST"])
+def post_hagemasi3():
+    py_hagemasi3 = request.form.get("comment3")
+    print(py_hagemasi3 == "")
+    if py_hagemasi3 == "":
+        return render_template('form3.html')
+    else:
+        conn = sqlite3.connect('service.db')
+        c =conn.cursor()
+        c.execute('SELECT id,userid FROM bbs ORDER BY  RANDOM() limit 1')
+        user_random = c.fetchone()
+        c.close()
+        print(user_random)
+        return render_template('img3.html',db_user_random = user_random)
 
-
-#ここから3枚目のリンクページに飛ぶ仕組み
-
-
-@app.route('/img1')
-def img1():
-    return render_template('img1.html',)
-
-
-@app.route('/img2')
-def img2():
-    return render_template('img2.html')
-
-# @app.route('/forom3'methods['POST'])
-# def formpost():
-#     return render_template('/img3')
-
-
-
-@app.route('/img3')
-def img3():
-    conn = sqlite3.connect('service.db')
-    c =conn.cursor()
-    c.execute('SELECT id,userid,comment FROM bbs ORDER BY  RANDOM() limit 1')
-    user_random = c.fetchone()
-    c.close()
-    print(user_random)
-    return render_template('img3.html',db_user_random = user_random)
+        
 
 
 
