@@ -1,3 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+
+
+<!-- ここはブタちゃんのランダム画像だよ！ -->
+<!-- この中でコードを記述したら勝手にフッターもヘッダーも反映されます！ -->
 <div class="buta">
     <img src="../static/img/yumekawa_animal_buta.png">
 </div>
@@ -5,31 +15,21 @@
     <img src="../static/img/LPVDhvHU.jpg">
 </div>
 
-<!-- ここはブタちゃんのランダム画像だよ！ -->
-<!-- この中でコードを記s述したら勝手にフッターもヘッダーも反映されます！ -->
-
-<div class="buta">
-    <img src="../static/img/yumekawa_animal_buta.png">
-</div>
-<div class="fukidasi">
-    <img src="../static/img/LPVDhvHU.jpg">
-</div>
-
-<div class="img">
 
 
 
 
 
-    <!-- ここから下はいじらないで！（まえだ） -->
-</div>
+<!-- ここから下はいじらないで！（まえだ） -->
+
+
 <p>aaaaaa</p>
 <p>aaaaaaa</p>
 <p>aaaaaaaa</p>
 <p>{{db_user_random}}</p>
 
 
-</div>
-</body>
 
-</html>
+
+
+{% endblock %}
