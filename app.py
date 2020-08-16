@@ -42,21 +42,33 @@ def form3():
 #ここから3枚目のリンクページに飛ぶ仕組み
 
 
-@app.route('/img1',methods=["POST"])
+@app.route('/img1')
 def img1():
     return render_template('img1.html',)
 
 
-@app.route('/img2',methods=["POST"])
+@app.route('/img2')
 def img2():
     return render_template('img2.html')
 
+# @app.route('/forom3'methods['POST'])
+# def formpost():
+#     return render_template('/img3')
 
-@app.route('/img3',methods=["POST"])
+
+
+@app.route('/img3')
 def img3():
-    return render_template('img3.html')
+    conn = sqlite3.connect('service.db')
+    c =conn.cursor()
+    c.execute('SELECT id,userid,comment FROM bbs ORDER BY  RANDOM() limit 1')
+    user_random = c.fetchone()
+    c.close()
+    print(user_random)
+    return render_template('img3.html',db_user_random = user_random)
 
-    
+
+
 
 
 
