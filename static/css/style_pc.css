@@ -39,7 +39,7 @@ body {
 }
 
 .item1 {
-	padding: 0 100px 0px 100px;
+	padding: 100px 100px 0px 100px;
 }
 
 /* 
@@ -357,7 +357,7 @@ main {
 	font-size: 28px;
 	border-bottom: 2px solid #dee7ec;
 	padding-bottom: 15px;
-	margin-bottom: 50px;
+	margin-bottom: 5px;
 }
 
 .main {
