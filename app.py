@@ -23,19 +23,7 @@ def index():
     
 #ここから2枚目のリンクページに飛ぶ仕組み
 
-# @app.route('/form1')
-# def form1():
-#     return render_template('form1.html',)
 
-
-# @app.route('/form2')
-# def form2():
-#     return render_template('form2.html')
-
-
-# @app.route('/form3')
-# def form3():
-#     return render_template('form3.html')
 
 
 
@@ -54,10 +42,10 @@ def post_hagemasi1():
     else:
         conn = sqlite3.connect('service.db')
         c =conn.cursor()
-        c.execute('SELECT id,name FROM user ORDER BY  RANDOM() limit 1')
+        c.execute('SELECT work FROM hagemasi ORDER BY  RANDOM() limit 1')
         user_random = c.fetchone()
         c.close()
-        print(user_random)
+        print(user_random[0])
         return render_template('img1.html',db_user_random = user_random)
 
 
@@ -81,10 +69,10 @@ def post_hagemasi2():
     else:
         conn = sqlite3.connect('service.db')
         c =conn.cursor()
-        c.execute('SELECT id,name FROM user ORDER BY  RANDOM() limit 1')
+        c.execute('SELECT love FROM hagemasi ORDER BY  RANDOM() limit 1')
         user_random = c.fetchone()
         c.close()
-        print(user_random)
+        print(user_random[0])
         return render_template('img2.html',db_user_random = user_random)
 
         
@@ -105,13 +93,81 @@ def post_hagemasi3():
     else:
         conn = sqlite3.connect('service.db')
         c =conn.cursor()
-        c.execute('SELECT id,userid FROM bbs ORDER BY  RANDOM() limit 1')
+        c.execute('SELECT human FROM hagemasi ORDER BY  RANDOM() limit 1')
         user_random = c.fetchone()
         c.close()
-        print(user_random)
+        print(user_random[0])
         return render_template('img3.html',db_user_random = user_random)
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# @app.route('/bbs')
+# def bbs():
+#     return render_template('bbs.html')
+
+
+# @app.route('/upload', methods=["POST"])
+# def do_upload():
+#     # bbs.tplのinputタグ name="upload" をgetしてくる
+#     upload = request.files['upload']
+#     # uploadで取得したファイル名をlower()で全部小文字にして、ファイルの最後尾の拡張子が'.png', '.jpg', '.jpeg'ではない場合、returnさせる。
+#     if not upload.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+#         return 'png,jpg,jpeg形式のファイルを選択してください'
+    
+#     # 下の def get_save_path()関数を使用して "./static/img/" パスを戻り値として取得する。
+#     save_path = get_save_path()
+#     # パスが取得できているか確認
+#     print(save_path)
+#     # ファイルネームをfilename変数に代入
+#     filename = upload.filename
+#     # 画像ファイルを./static/imgフォルダに保存。 os.path.join()は、パスとファイル名をつないで返してくれます。
+#     upload.save(os.path.join(save_path,filename))
+#     # ファイル名が取れることを確認、あとで使うよ
+#     print(filename)
+    
+
+    
+#     conn = sqlite3.connect('service.db')
+#     c = conn.cursor()
+#     # update文
+#     # 上記の filename 変数ここで使うよ
+
+
+#     #ファイル名の保存先。
+#     c.execute("INSERT INTO hagemasi where id = 1 (id,work,) VALUES (null,'no_img.png' ...)",)
+#     # c.execute("update user set prof_img = ? where id=?", (filename,user_id))
+#     conn.commit()
+#     conn.close()
+
+#     return redirect ('/bbs')
+
+# #課題4の答えはここも
+# def get_save_path():
+#     path_dir = "./static/img2"
+#     return path_dir
 
 
 
