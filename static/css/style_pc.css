@@ -23,6 +23,7 @@ body {
 	min-width: 100%;
 	-webkit-text-size-adjust: 100%;
 	background-image: url(../img/ZHlO6EYo.jpg);
+	background-size: 2000px;
 }
 
 .aaa {
@@ -38,7 +39,7 @@ body {
 }
 
 .item1 {
-	padding: 0 100px 0px 100px;
+	padding: 100px 100px 0px 100px;
 }
 
 /* 
@@ -349,14 +350,14 @@ main {
 /* これが1つ目のカテゴリー部分  */
 .contens-item {
 	float: left;
-	margin: 0px 30px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
 
 .section-title {
 	font-size: 28px;
 	border-bottom: 2px solid #dee7ec;
 	padding-bottom: 15px;
-	margin-bottom: 50px;
+	margin-bottom: 5px;
 }
 
 .main {
