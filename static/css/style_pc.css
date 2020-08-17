@@ -23,6 +23,7 @@ body {
 	min-width: 100%;
 	-webkit-text-size-adjust: 100%;
 	background-image: url(../img/ZHlO6EYo.jpg);
+	background-size: 2000px;
 }
 
 .aaa {
@@ -349,7 +350,7 @@ main {
 /* これが1つ目のカテゴリー部分  */
 .contens-item {
 	float: left;
-	margin: 0px 30px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
 
 .section-title {
@@ -370,14 +371,14 @@ main {
 .imgWrap {
 	overflow: hidden;
 	/*拡大時にはみ出た部分を隠す*/
-	width: 320px;
+	/* width: 320px; */
 	/*画像の幅*/
 	height: 180px;
 	/*画像の高さ*/
 }
 
 .imgWrap img {
-	display: block;
+	/* display: block; */
 	transition-duration: 0.3s;
 	/*変化に掛かる時間*/
 }
