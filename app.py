@@ -126,7 +126,11 @@ def question():
 
 
 
+#ここから隠しキャラ、ゲロッター君のbotです！
 
+@app.route('/groter')
+def groter():
+    return render_template('groter.html')
 
 
 
