@@ -99,12 +99,30 @@ def post_hagemasi3():
         print(user_random[0])
         return render_template('img3.html',db_user_random = user_random)
 
-        
+
+#ここからお問い合わせ内容です
+
+@app.route('/request')
+def request_get():
+    return render_template('request.html')
+
+
+@app.route('/request',methods=["post"])
+def request_post():
+    py_post = request.form.get('request')
+    conn = sqlite3.connect('service.db')
+    c =conn.cursor()
+    c.execute('INSERT INTO request VALUES (null,?)' ,(py_post,))
+    conn.commit()
+    c.close()
+    return redirect('/')
 
 
 
 
-
+@app.route('/question')
+def question():
+    return render_template('question.html')
 
 
 
