@@ -18,7 +18,7 @@ h1 {
 body {
 	background: #fff;
 	text-align: center;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.4;
 	min-width: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -26,11 +26,14 @@ body {
 	background-size: 2000px;
 }
 
+
+
+
 .aaa {
 	background-image: url(../img/home1.png);
 	padding: 100px;
-	background-size: 800px 300px;
-	height: 100px;
+	background-size: 1200px 300px;
+	height: 150px;
 }
 
 
@@ -411,7 +414,6 @@ main {
 
 
 
-
 /* 課題7解答 ----------------------------------------
 #chatWrap {
 	background-color: #fff;
@@ -466,14 +468,12 @@ main {
 /* これはランダムに出てくる画像の幅を変えています（3枚のページの画像に適用されてます） */
 
 .prof_img {
-	width: 300px;
-	height: 200px;
+	width: 350px;
+	height: 300px;
+	padding-top: 100px;
 
 }
 
 .counselor {
-	/* text-align: right; */
 	padding-left: 300px;
-	padding-top: 100px;
-
 }
