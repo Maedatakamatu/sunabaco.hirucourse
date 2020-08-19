@@ -27,9 +27,10 @@ body {
 }
 
 .aaa {
-	background-image: url(../img/a59mOk1xwzCkGAVACiuxWHpuHAxYtqj3eORPGM6lMb6FRGQmu5bMfaR_mp9zW5kvYUE7K1yFiy827ZBVFv95whrZVSZW4DMb4m8YtD8pUl6vmpmR.jpg);
+	background-image: url(../img/home1.png);
 	padding: 100px;
-	background-size: 1440px 340px;
+	background-size: 800px 300px;
+	height: 100px;
 }
 
 
