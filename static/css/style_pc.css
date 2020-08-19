@@ -455,3 +455,24 @@ main {
 	padding-top: 120px;
 
 }
+
+/* よくある質問の文章、真ん中に寄せる。 */
+.faqList {
+	margin-left: 250px;
+}
+
+
+/* これはランダムに出てくる画像の幅を変えています（3枚のページの画像に適用されてます） */
+
+.prof_img {
+	width: 300px;
+	height: 200px;
+
+}
+
+.counselor {
+	/* text-align: right; */
+	padding-left: 300px;
+	padding-top: 100px;
+
+}
