@@ -416,3 +416,14 @@ main {
 	width: 400px;
 	margin-top: 60px;
 }
+
+.mokutekinaiyou {
+	padding-bottom: 50px;
+}
+
+
+/* キメラ君を透明化しています。 */
+
+.kimera_opacity {
+	opacity: 0;
+}

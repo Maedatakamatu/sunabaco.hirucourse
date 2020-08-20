@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- ここはキメラ君が担当してます！ -->
+
+<div class="item1">
+    <a href="#"><img src="../static/img/kimera.png"></a>
+    <p>キメラ君</p>
+    <form action="/kimera_form" method="POST">
+        内容：<textarea name="kimeracomment" cols="30" rows="5" placeholder="キメラ君にメッセージを送ってみよう！"></textarea><br>
+        <input type="submit" value="送信">
+    </form>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -126,11 +126,40 @@ def question():
 
 
 
-#ここから隠しキャラ、ゲロッター君のbotです！
+#新キャラキメラ君のフォームページです！
 
-@app.route('/groter')
-def groter():
-    return render_template('groter.html')
+@app.route('/kimera_form')
+def get_kimera():
+    return render_template('kimera_form.html')
+
+@app.route('/kimera_form' ,methods=["POST"])
+def post_kimera():
+    py_hagemasi3 = request.form.get("kimeracomment")
+    print(py_hagemasi3 == "")
+    if py_hagemasi3 == "":
+        return render_template('kimera_form.html')
+    else:
+        conn = sqlite3.connect('service.db')
+        c =conn.cursor()
+        c.execute('SELECT kimera FROM hagemasi ORDER BY  RANDOM() limit 1')
+        user_random = c.fetchone()
+        c.close()
+        print(user_random[0])
+        return render_template('kimera_img.html',db_user_random = user_random)
+
+
+
+
+
+
+
+
+
+# #ここから隠しキャラ、ゲロッター君のbotです！
+
+# @app.route('/groter')
+# def groter():
+#     return render_template('groter.html')
 
 
 
