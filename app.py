@@ -126,7 +126,7 @@ def question():
 
 
 
-#新キャラキメラ君のフォームページです！
+#新キャラキメラ君のランダムページです！
 
 @app.route('/kimera_form')
 def get_kimera():
